@@ -44,6 +44,22 @@ class LottoDisplay extends HTMLElement {
 
 customElements.define('lotto-display', LottoDisplay);
 
+// Theme Toggle Logic
+const themeBtn = document.getElementById('theme-btn');
+const body = document.body;
+
+// Check for saved theme preference
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+    body.classList.add(savedTheme);
+}
+
+themeBtn.addEventListener('click', () => {
+    body.classList.toggle('dark-theme');
+    const currentTheme = body.classList.contains('dark-theme') ? 'dark-theme' : '';
+    localStorage.setItem('theme', currentTheme);
+});
+
 document.getElementById('generate-btn').addEventListener('click', () => {
     const lottoDisplay = document.querySelector('lotto-display');
     const numbers = generateUniqueNumbers(6, 1, 45);

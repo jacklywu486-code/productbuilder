@@ -5,6 +5,19 @@
     --secondary-color: #ff7f50;
     --text-color: #333333;
     --shadow-color: rgba(0, 0, 0, 0.1);
+    --gradient-start: #4a90e2;
+    --gradient-end: #ff7f50;
+}
+
+body.dark-theme {
+    --main-bg-color: #1a1a1a;
+    --container-bg-color: #2d2d2d;
+    --primary-color: #64b5f6;
+    --secondary-color: #ffab91;
+    --text-color: #e0e0e0;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    --gradient-start: #1e3a5f;
+    --gradient-end: #5f3e1e;
 }
 
 body {
@@ -15,7 +28,8 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-image: linear-gradient(45deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background-image: linear-gradient(45deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    transition: background-color 0.3s ease, background-image 0.3s ease;
 }
 
 .container {
@@ -26,6 +40,28 @@ body {
     text-align: center;
     width: 90%;
     max-width: 500px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#theme-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+#theme-btn:hover {
+    transform: rotate(20deg);
 }
 
 h1 {

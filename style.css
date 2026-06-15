@@ -28,7 +28,11 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-image: linear-gradient(45deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(45deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    background-size: 20px 20px, 20px 20px, 100% 100%;
     transition: background-color 0.3s ease, background-image 0.3s ease;
 }
 
@@ -39,9 +43,10 @@ body {
     box-shadow: 0 10px 30px var(--shadow-color);
     text-align: center;
     width: 90%;
-    max-width: 500px;
+    max-width: 600px;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     position: relative;
+    margin: 20px;
 }
 
 .theme-toggle {

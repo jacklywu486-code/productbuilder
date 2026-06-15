@@ -19,18 +19,22 @@ This project creates a web-based Lotto Number Generator. The application will pr
 *   **Number Generation:** Generates a set of 6 unique random numbers within a specified range (e.g., 1-45).
 *   **Interactive UI:** A "Generate" button to trigger the number generation.
 *   **Number Display:** The generated numbers will be displayed in a clear and visually appealing format.
-*   **Web Components:** A custom element (`<lotto-display>`) will be used to encapsulate the number display logic.
+*   **Web Components:** Custom elements (`<lotto-display>` and `<contact-form>`) will be used to encapsulate the number display and contact form logic.
 *   **Dark/Light Mode:** A theme toggle allows users to switch between light and dark modes, with persistence using local storage.
+*   **Partnership Inquiry:** A simple contact form powered by Formspree for handling partnership requests.
 
 ## **Current Plan**
 
 1.  **`index.html`**:
     *   Add a theme toggle button.
+    *   Integrate the `<contact-form>` component.
 2.  **`style.css`**:
     *   Define CSS variables for both light and dark themes.
     *   Implement theme switching using a class on the body element.
+    *   Add styles for the partnership inquiry form.
 3.  **`main.js`**:
     *   Implement theme toggle logic.
     *   Persist the theme preference in `localStorage`.
+    *   Create the `<contact-form>` Web Component.
 4.  **Deployment**:
     *   Commit and push changes to the repository.
